@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Read from "./components/Read";
+import Delete from "./components/Delete";
+import Update from "./components/Update";
+import Create from "./components/Create";
+import { Children } from "react";
 
-function App() {
+function App({ Children }) {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>CRUD</h2>
+      <p>an app to create, read, update and delete contacts!</p>
+      <div>{Children}</div>
     </div>
   );
 }
