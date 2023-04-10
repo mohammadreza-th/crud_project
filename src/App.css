@@ -12,15 +12,24 @@
   color: brown;
 }
 
- Form {
+Form {
   margin: auto;
   width: 200px;
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
 }
-#firstName{
+#firstName {
   color: blue;
 }
-#lastName{
+#lastName {
   color: red;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.table__container{
+  margin: 0 50px;
 }

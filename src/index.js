@@ -2,18 +2,28 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import { Container, Header, List } from "semantic-ui-react";
 import Create from "./components/Create";
-import pkg from "semantic-ui-react/package.json";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Read from "./components/Read";
 import Update from "./components/Update";
 import Delete from "./components/Delete";
+import HomePage from "./components/HomePage";
 
 const router = createBrowserRouter([
   {
+    path: "/",
+    element: (
+      <App>
+        <HomePage />
+      </App>
+    ),
+  },{
     path: "/read",
-    element: <App></App>,
+    element: (
+      <App>
+        <Read />
+      </App>
+    ),
   },
   {
     path: "/update",
@@ -26,21 +36,25 @@ const router = createBrowserRouter([
 
   {
     path: "/create",
-    element: <Create />,
+    element: (
+      <App>
+        <Create />
+      </App>
+    ),
   },
   {
     path: "/delete",
     element: (
-      <App>;lkjsdf</App>
+      <App>
+        <Delete />
+      </App>
     ),
   },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

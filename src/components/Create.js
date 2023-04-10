@@ -5,12 +5,12 @@ import { useState } from "react";
 import "semantic-ui-css/semantic.min.css";
 
 const Create = () => {
-  const [firstName, setFirstName] = useState("");
+  const [mami, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [checkbox, setCheckbox] = useState(false);
   const postData = () => {
     axios.post(`https://64318147d4518cfb0e62f291.mockapi.io/contacts`, {
-      firstName,
+      mami,
       lastName,
       checkbox,
     });
